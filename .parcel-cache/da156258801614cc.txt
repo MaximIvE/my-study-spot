@@ -1,7 +1,7 @@
 13073
 77F:\Dev Projects\my-study-spot\node_modules\rxjs\_esm5\add\observable\empty.js133230163279451405 0
 77F:\Dev Projects\my-study-spot\node_modules\send\node_modules\depd\lib\browser133230163137085106 1
-42F:\Dev Projects\my-study-spot\package.json133230248122837219 0
+42F:\Dev Projects\my-study-spot\package.json133230264030900524 0
 73F:\Dev Projects\my-study-spot\node_modules\svgo\plugins\removeComments.js133230175516169032 0
 63F:\Dev Projects\my-study-spot\node_modules\terser\dist\.gitkeep133230175394510359 0
 51F:\Dev Projects\my-study-spot\node_modules\inherits133230163122626092 1
@@ -36,7 +36,7 @@
 56F:\Dev Projects\my-study-spot\node_modules\lodash\min.js133230163256723177 0
 61F:\Dev Projects\my-study-spot\node_modules\utility-types\dist133230175479384344 1
 71F:\Dev Projects\my-study-spot\node_modules\rxjs\add\operator\pluck.d.ts133230163317800638 0
-40F:\Dev Projects\my-study-spot\.gitignore133230158105855152 0
+40F:\Dev Projects\my-study-spot\.gitignore133230261837527553 0
 40F:\Dev Projects\my-study-spot\index.html133230129726084149 0
 55F:\Dev Projects\my-study-spot\node_modules\rxjs\Rx.d.ts133230163165245821 0
 64F:\Dev Projects\my-study-spot\node_modules\rxjs\src\add\operator133230163365202654 1
@@ -80,7 +80,7 @@
 54F:\Dev Projects\my-study-spot\node_modules\glob-parent133230163122756008 1
 55F:\Dev Projects\my-study-spot\node_modules\rx\readme.md133230163201875175 0
 104F:\Dev Projects\my-study-spot\node_modules\@parcel\core\test\fixtures\config-extends-not-found\.parcelrc133230175396643403 0
-43F:\Dev Projects\my-study-spot\tsconfig.json133230179506052703 0
+43F:\Dev Projects\my-study-spot\tsconfig.json133230262039159144 0
 86F:\Dev Projects\my-study-spot\node_modules\socket.io-parser\node_modules\ms\license.md133230163115156423 0
 83F:\Dev Projects\my-study-spot\node_modules\yaml\browser\dist\PlainValue-b8036b75.js133230175496810957 0
 65F:\Dev Projects\my-study-spot\node_modules\picomatch\CHANGELOG.md133230163145569879 0
