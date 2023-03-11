@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study Spot</title>
+    <link rel="shortcut icon" type="image/jpg" href="../../../images/logo-favicon.jpg" />
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <script src="../../../../dist/elements/elementSizes.js" defer></script>
+    <script src="../../../../dist/lesson1.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-contanier">
+            
+            <h2 class="logo">My Study Spot</h2>
+            <a class="links header-link" href="../../../../index.html">На головну</a>
+        </div>
+    </header>
+    <div class="header-padding"></div>
+    
+    <main>
+        <h2 class="page-title">Квадратні рівняння</h2>
+        <div class="contanier">
+            <div class="section">
+                <h3>Означення</h3>
+                    <p>Рівняння, яке виглядає так: <span class="formula">ax<span class="sup">2</span> + bx + c = 0</span> , називається квадратним. <br/>Тут <b><i>a, b</i></b> і <b><i>c</i></b> – це числа.</p>
+                <ul>
+                    <li><b><i>a</i></b> – це множник, на який множиться <b><i>x<span class="sup">2</span></i></b>;</li>
+                    <li><b><i>b</i></b> – це множник, на який множиться <b><i>x</i></b>;</li>
+                    <li><b><i>c</i></b> – це деяке окреме число.</li>
+                </ul>
+            </div>
+
+
+            <div class="section">
+                <h3>Приклади</h3>
+                <ul>
+                    <li><i>9x<span class="sup">2</span> - 6x + 1 = 0</i> – квадратне рівняння.</li>
+                    <li><i>9x<span class="sup">2</span> + 1 - 6x = 0</i>  – також квадратне рівняння, тільки <i>+1</i> і <i>- 6x</i> поміняли місцями (тут рівняння має вигляд <i>ax<span class="sup">2</span> + c + bx = 0</i>).</li>
+                    <li><i>9x<span class="sup">2</span> + 1 = 6x</i> – також квадратне рівняння, просто <i>-6x</i> перенесли праворуч від <i>"="</i> і при цьому поміняли знак.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+            <h3>Розв’язок квадратних рівнянь (3 кроки)</h3>
+                <p>Умова. Розв'яжить рівняння: <i>9x<span class="sup">2</span> - 6x + 1 = 0.</i></p>
+                <div class="note">(якщо потрібно) Приводимо квадратне рівняння до вигляду <div class="formula">ax<span class="sup">2</span> + bx + c = 0.</div></div>
+                
+                <ol type = "1">
+                    <li class="slow-list">Визначаємо коефіцієнти <b><i>a, b</i></b> і <b><i>c</i></b>:
+                        <br /><i><b>a</b> = 9; <b>b</b> = - 6; <b>c</b> = 1;</i> 
+                        <div class="note">
+                            <ul>
+                                <li><b>Примітка 1. a</b> = 9 не тому, що стоїть на першому місці в нашому рівнянні, а тому, що це те число, на яке множиться <b>x<span class="sup">2</span></b>.
+                                    Аналогічно, <b>b</b> –
+                                це те число, на яке множиться <b>x</b>.</li>
+                                <li><b>Примітка 2. b</b> = - 6. Знак "<b>-</b>" перед <b>6</b> стоїть тому, що в рівнянні перед <b>x</b> стоїть <b>- 6</b>, а не <b>6</b>.</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="slow-list">Знаходимо дискримінант за формулою: <img class="img-formula-text" src="../../../images/algebra/quadraticEquations/06.jpg" alt="Формула дискрімінанта">:
+                        <br/>D = (-6)<span class="sup">2</span> - 4·9·1 = 36 - 36 = 0;
+                    </li>
+
+                    <li class="slow-list">Знаходимо корені рівняння за формулою: <img class="img-formula" src="../../../images/algebra/quadraticEquations/01.jpg" alt="Формула коренів квадратного рівняння">:
+                        <img style="height: 8.1em;" class="img-solutions" src="../../../images/algebra/quadraticEquations/02.jpg" alt="Розв'язок коренів квадратного рівняння" >
+                    </li>
+                </ol>
+                
+                <br /><p class="text-indent">Як бачимо, <i>x<span class="sub">1</span></i> та <i>x<span class="sub">2</span></i> в даному випадку однакові. Це із-за того, що <i>D = 0</i>. Тому, по суті, отримали 1 корінь рівняння, 
+                <img class="img-formula" src="../../../images/algebra/quadraticEquations/03.jpg" alt="x=1/3">.
+                <!-- <br />А от якщо <i>D < 0</i>, то при розрахунку 
+                <img class="img-formula" src="../../images/algebra/quadraticEquations/01.jpg" alt="Формула коренів квадратного рівняння">
+                ми не зможем здобути 
+                <img class="img-formula-text"  src="../../images/algebra/quadraticEquations/04.jpg" alt="Корінь із дискрімінанта">
+                , тому розв’язків такого рівняння не буде.</p> -->
+            </div>
+
+            <div class="section">
+            <h3>Підсумок</h3>
+                <p>Рівняння, яке виглядає так: <span class="formula">ax<span class="sup">2</span> + bx + c = 0</span> , називається квадратним.</p>
+                <p>Розв’язок квадратного рівняння:</p>
+                <ol type="1">
+                    <li class="slow-list">Визначаємо коефіцієнти <b><i>a, b</i></b> і <b><i>c</i></b>;
+                    </li>
+                
+                    <li class="slow-list">Знаходимо дискримінант за формулою: <img class="img-formula-text" src="../../../images/algebra/quadraticEquations/06.jpg" alt="Формула дискрімінанта">;
+                    </li>
+                
+                    <li class="slow-list">Знаходимо корені рівняння за формулою: 
+                        <ul class="list-marker">
+                            <li>Якщо <i>D < 0 </i>, рівняння не має розв’язків;</li>
+                            <li>Якщо <i>D = 0 </i>, рівняння має один розв'язок: <img class="img-formula" src="../../../images/algebra/quadraticEquations/05.jpg" alt="Формула коренів квадратного рівняння">;</li>
+                            <li>Якщо <i>D > 0 </i>, рівняння має два розв'язки: <img class="img-formula" src="../../../images/algebra/quadraticEquations/01.jpg" alt="Формула коренів квадратного рівняння">.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h3>Практика</h3>
+                <p>Самостійно розв’яжіть наступні рівняння:</p>
+                <ol type="1">
+                    <li class="slow-list">
+                        <i>2x<span class="sup">2</span> - 9x + 10 = 0</i>
+                    </li>
+                    <li class="slow-list">
+                        <i>x<span class="sup">2</span> - 10x - 24 = 0</i>
+                    </li>
+                    <li class="slow-list">
+                        <i>y<span class="sup">2</span> + y - 90 = 0</i>
+                    </li>
+                    <li class="slow-list">
+                        <i>4x<span class="sup">2</span> - 12x + 9 = 0</i>
+                    </li>
+                    <li class="slow-list">
+                        <i>18 + 3x<span class="sup">2</span> - x = 0</i>
+                    </li>
+                
+                </ol>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

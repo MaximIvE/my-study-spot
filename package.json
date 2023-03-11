@@ -1,0 +1,26 @@
+{
+  "name": "my-study-spot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "build": "parcel build src/*.html --public-url /my-study-spot/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaximIvE/my-study-spot.git"
+  },
+  "author": "MaximIvE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaximIvE/my-study-spot/issues"
+  },
+  "homepage": "https://coruscating-toffee-2dd00f.netlify.app/index.html",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4"
+  }
+}
