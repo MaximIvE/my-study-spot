@@ -17,6 +17,12 @@ body {
     height: 100vh;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 p,
 h1,
 h2,
@@ -49,9 +55,29 @@ ul{
     color: var(--color-links-hover);
 }
 
-/* .links-menu{
 
-} */
+/* .links-practice{ */
+    /* border-radius: 4px; */
+    /* padding: 2px 4px; */
+    /* margin-left: 20px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); */
+/* }; */
+
+.links-practice{
+    border: 1px solid var(--background-header);
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-left: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.links-practice:hover {
+    background-color: var(--background-header);
+}
+
+.links-practice:active {
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
 
 .sub{
     vertical-align: sub;
@@ -175,3 +201,43 @@ main{
     background-color: #2b1c59;
 }
 
+/* ---------- Practice --------------*/
+
+/* ----- quadraticEquations ----- */
+
+.condition{
+    margin-bottom: 12px;
+}
+
+.solution-steps{
+    margin-bottom: 24px;
+}
+
+.condition-title{
+    display: inline;
+}
+.condition-content{
+    display: inline;
+}
+
+.solution-text{
+    margin-bottom: 8px;
+}
+
+.solution-list-step1{
+    display: flex;
+    margin-right: 12px;
+}
+
+.input-solution{
+    width: 3em;
+    margin-right: 12px;
+    padding: 2px;
+    border: 1px solid var(--background-header);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.solution-answer{
+    display:flex;
+}

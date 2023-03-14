@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study Spot</title>
+    <link rel="shortcut icon" type="image/jpg" href="../../../images/logo-favicon.jpg" />
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <script src="/src/js/elementSizes.js" defer type="module"></script>
+    <script defer src="../../../js/practica/algebra/quadraticEquations.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="header-contanier">
+            <h2 class="logo">My Study Spot</h2>
+            <a class="links header-link" href="../../../../index.html">На головну</a>
+        </div>
+    </header>
+    <div class="header-padding"></div>
+    
+    <main>
+        <h2 class="page-title">Прості квадратні рівняння <span class="formula">ax<span class="sup">2</span> + bx + c = 0</span></h2>
+        <div class="contanier">
+            <div class="practice-section">
+                <div class="condition">
+                    <h4 class="condition-title">Умова: </h4>
+                    <div class="condition-content" id="condition"></div>
+                    <!-- <div class="condition-content" id="condition"><span class="formula"><i>2x<span class="sup">2</span> - 9x + 10 = 0</i></div> -->
+                </div>
+
+                <div class="solution">
+                    <div class="solution-steps">
+                        <p class="solution-text">1. Знайди і запиши a, b, c</p>
+                        <div class="solution-answer">
+                            <ul class="solution-list-step1">
+                                <li>a=
+                                    <input type="number" class="input-solution">
+                                </li>
+                                <li>b=
+                                    <input type="number" class="input-solution">
+                                </li>
+                                <li>c=
+                                    <input type="number" class="input-solution">
+                                </li>
+                            </ul>
+                            <button id="step1-check">Перевірити</button>
+                        </div>
+                    </div>
+                    <div class="solution-steps">
+                        <p class="solution-text">2. Обчисли дискримінант D</p>
+                        <div class="solution-answer">
+                            <div>D= <input type="number" class="input-solution"></div>
+                            <button id="step2-check">Перевірити</button>
+                        </div>
+                    </div>
+                    <div class="solution-steps">
+                        <p class="solution-text">3. Обчисли <i>x<span class="sub">1</span></i> та <i>x<span class="sub">2</span></i>
+                        </p>
+                        <div class="solution-answer">
+                            <ul class="solution-list-step1">
+                                <li><i>x<span class="sub">1</span></i> = 
+                                    <input type="number" class="input-solution">
+                                </li>
+                                <li><i>x<span class="sub">2</span></i> = 
+                                    <input type="number" class="input-solution">
+                                </li>
+                            </ul>
+                            <button id="step3-check">Перевірити</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+
+            
+
+        </div>
+    </main>
+</body>
+</html>
