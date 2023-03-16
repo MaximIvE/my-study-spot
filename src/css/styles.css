@@ -204,7 +204,6 @@ main{
 /* ---------- Practice --------------*/
 
 /* ----- quadraticEquations ----- */
-
 .condition{
     margin-bottom: 12px;
 }
@@ -229,6 +228,7 @@ main{
     margin-right: 12px;
 }
 
+
 .input-solution{
     width: 3em;
     margin-right: 12px;
@@ -236,6 +236,15 @@ main{
     border: 1px solid var(--background-header);
     border-radius: 4px;
     text-align: center;
+}
+
+.value-error {
+    border-color: tomato;
+
+}
+
+.value-success{
+    border-color: rgb(44, 199, 44);
 }
 
 .solution-answer{
