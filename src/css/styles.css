@@ -1,11 +1,17 @@
-:root{
+:root {
     --background: #77777710;
     --background-header: #fff4e0;
+    --background-element: rgba(255, 244, 224, 0.2);
     --background-content: #ffffff;
-    --decorate-header:rgba(203, 189, 159, 0.2);
-    --color-header:#201705;
-    --color-links:#838697;
-    --color-links-hover:#2b1c59;
+    --decorate-header: rgba(203, 189, 159, 0.2);
+    --botton-border: rgb(215, 193, 151);
+    --block-border: rgb(231, 217, 192);
+    --success-border-color: rgb(44, 199, 44);
+    --success-text-color: rgb(22, 157, 22);
+    --success-background-color: rgb(148, 212, 148);
+    --color-header: #201705;
+    --color-links: #838697;
+    --color-links-hover: #2b1c59;
     --color-notes: #7c7c7c;
     --header-height: 60px;
 }
@@ -26,20 +32,20 @@ input::-webkit-inner-spin-button {
 p,
 h1,
 h2,
-h3, 
-h4, 
-ol, 
-ul{
+h3,
+h4,
+ol,
+ul {
     margin: 0;
 }
 
-ul{
+ul {
     padding: 0;
     list-style: none;
 }
 
-.list-marker{
-    list-style:disc;
+.list-marker {
+    list-style: disc;
 }
 
 .links {
@@ -50,46 +56,41 @@ ul{
     min-width: 4.8em;
 }
 
-.links:hover{
+.links:hover {
     cursor: pointer;
     color: var(--color-links-hover);
 }
 
-
-/* .links-practice{ */
-    /* border-radius: 4px; */
-    /* padding: 2px 4px; */
-    /* margin-left: 20px; */
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); */
-/* }; */
-
-.links-practice{
-    border: 1px solid var(--background-header);
+.button {
+    cursor: pointer;
+    border: 1px solid var(--botton-border);
+    background-color: #fff7ec;
     border-radius: 4px;
     padding: 2px 4px;
-    margin-left: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(116, 102, 17, 0.4);
 }
 
-.links-practice:hover {
-    background-color: var(--background-header);
+.button:hover {
+    background-color: #ffeed3;
 }
 
-.links-practice:active {
+.button:active {
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fdedd9;
 }
 
-.sub{
+.sub {
     vertical-align: sub;
     font-size: 0.8em;
 }
-.formula{
+
+.formula {
     display: inline;
     font-weight: 600;
     font-style: italic;
 }
 
-.sup{
+.sup {
     vertical-align: super;
     font-size: 0.8em;
 }
@@ -112,11 +113,11 @@ header {
     min-height: var(--header-height);
 }
 
-.header-link{
+.header-link {
     font-size: 0.8em;
 }
 
-main{
+main {
     box-sizing: border-box;
     background-color: var(--background-content);
     max-width: 1120px;
@@ -126,13 +127,14 @@ main{
 
 }
 
-.list-menu{
+.list-menu {
     font-size: 1.4em;
+    padding-inline-start: 20px;
 }
 
-/* .contanier {
-    padding: 0 20px;
-} */
+.count-item {
+    display: inline;
+}
 
 .page-title {
     font-size: 1.4em;
@@ -141,62 +143,66 @@ main{
 
 }
 
-.section{
+.section {
     border-bottom: 1px solid var(--decorate-header);
-    padding: 12px 0 8px; 
+    padding: 12px 0 8px;
 }
 
-.logo{
-    
+.logo {
     text-shadow: 0 0 2px #fff;
     margin-bottom: 4px;
 }
 
-.note{
-    color:var(--color-notes);
+.note {
+    color: var(--color-notes);
     font-style: italic;
     margin-bottom: 16px;
     font-size: 0.8em;
 }
-.text-indent{
-    text-indent:1em;
+
+.text-indent {
+    text-indent: 1em;
 }
 
-.main-menu-title{
+.main-menu-title {
     font-size: 1.32em;
     margin-bottom: 16px;
 }
 
-.menu-item{
+.menu-item {
+    justify-content: flex-start;
     font-size: 0.72em;
 }
-.menu-item:not(:last-child){
+
+
+.menu-item:not(:last-child) {
     margin-bottom: 4px;
 }
-.menu-item:first-child{
+
+.menu-item:first-child {
     margin-top: 8px;
 }
 
-/* .line{
-    border-bottom: 1px solid var(--decorate-header);
-    margin: 8px 0 24px;
-} */
+/* Це щоб всі кнопки практики розташувати праворуч в одну лінію*/
+.links-item {
+    width: 200px;
+}
 
-.slow-list:not(:first-child){
+.slow-list:not(:first-child) {
     margin-top: 0.4em;
 }
 
-.img-formula{
+.img-formula {
     height: 2.6em;
     vertical-align: middle;
 }
 
-.img-formula-text{
+.img-formula-text {
     height: 1.5em;
     vertical-align: middle;
 }
 
-.img-solutions{
+.img-solutions {
     display: block;
     background-color: #2b1c59;
 }
@@ -204,36 +210,76 @@ main{
 /* ---------- Practice --------------*/
 
 /* ----- quadraticEquations ----- */
-.condition{
+.tascs {
+    text-align: center;
+}
+
+.tascs-list {
+    display: inline-block;
+    text-align: start;
+    margin-bottom: 16px;
+    padding: 8px 4px 8px 16px;
+    border-radius: 8px;
+    background: var(--background-element);
+    border: 1px solid var(--block-border);
+}
+
+.tascs-item {
+    margin-right: 12px;
+    display: inline-block;
+}
+
+
+.tascs-button {
+    height: 2em;
+    width: 2em;
+}
+
+.tascs-button-success {
+    border: 1px solid var(--success-border-color);
+    color: var(--success-text-color);
+    background-color: #fff9f0;
+    box-shadow: 0 2px 4px var(--success-background-color);
+}
+
+.tascs-button-progress {
+    border: 1px solid var(--botton-border);
+    color: var(--success-text-color);
+    background-color: #fff7ec;
+    box-shadow: 0 2px 4px rgba(116, 102, 17, 0.4);
+}
+
+.condition {
     margin-bottom: 12px;
 }
 
-.solution-steps{
+.solution-steps {
     margin-bottom: 24px;
 }
 
-.condition-title{
-    display: inline;
-}
-.condition-content{
+.condition-title {
     display: inline;
 }
 
-.solution-text{
+.condition-content {
+    display: inline;
+}
+
+.solution-text {
     margin-bottom: 8px;
 }
 
-.solution-list-step1{
+.solution-list-step1 {
     display: flex;
     margin-right: 12px;
 }
 
 
-.input-solution{
+.input-solution {
     width: 3em;
     margin-right: 12px;
     padding: 2px;
-    border: 1px solid var(--background-header);
+    border: 1px solid var(--block-border);
     border-radius: 4px;
     text-align: center;
 }
@@ -243,10 +289,10 @@ main{
 
 }
 
-.value-success{
-    border-color: rgb(44, 199, 44);
+.value-success {
+    border-color: var(--success-border-color);
 }
 
-.solution-answer{
-    display:flex;
+.solution-answer {
+    display: flex;
 }

@@ -1,14 +1,22 @@
 const mainElement = document.querySelector("main");
 const titleitleElement = mainElement.querySelector(".page-title");
+const tactsElement = mainElement.querySelector(".tascs");
 const conditionElement = document.querySelector("div.condition");
 const solutionElement = document.querySelector("div.solution");
 
-// Створюємо заголовок
-titleitleElement.innerHTML = `Прості квадратні рівняння <span class="formula">ax<span class="sup">2</span> + bx + c = 0</span>`
-// const inputs = solution.querySelector(".solution-list-step1").querySelectorAll("input")
-// const check1 = solution.querySelector("#step1-check");
+const data = [
+    [1, -4, 3],
+    [2, -9, 10],
+    [1, 4, -5],
+    [1, 4, 4],
+    [1, -5, 9],
+    [4, -1, -5],
+    [-2, 3, 5],
+    [1, 1, 10],
+    [1, 4, -5],
+    [1, -6, 9],
+];
 
-const data = [[2, -9, 10],];
 const markUp = {
     condition: `<h4 class="condition-title">Умова: </h4>
                     <div class="condition-content" id="condition">
@@ -53,19 +61,35 @@ const markUp = {
     step4: `<p class="solution-text">Все вірно!!!</p>`
 }
 
+const results = data.map(([a, b, c]) => {
+    const d = b ** 2 - 4 * a * c;
+    if (d < 0) return { a, b, c, d, x: "NaN" };
+    if (d === 0) {
+        const x = (-1 * b / (2 * a));
+        return { a, b, c, d, x }; 
+    }
+    const x1 = (-1*b + Math.sqrt(d)) / (2 * a);
+    const x2 = (-1*b - Math.sqrt(d)) / (2 * a);
+    return { a, b, c, d, x1, x2};
+}
+)
+
+// console.log(results);
+
 let n = 0;
-const number = data[n];
+let number = [];
 let d;
 
-// Створюємо блок умови та публікуємо її
+// Генерація розмітки по шаблонному рядку та публікація
 function createMarkUp(element, markup) {
     element.innerHTML = markup;
 }
 
-function createElement(type, className) {
+//Створення тега певного типу та з певним класом
+function createElement(type, className, parrentElement) {
     const element = document.createElement(type);
     element.className = className;
-    solutionElement.append(element);
+    if(parrentElement) parrentElement.append(element);
     return element;
 }
 
@@ -187,11 +211,14 @@ function getCondition() {
     }
     if(result[0] === "+") result = result.slice(2, result.length)
     return result + " = 0.";
+    
 };
 
+// Розділ покрокового відображення розмітки під час розв'язку
 // ----- Step1 -----
 function step1() {
-    const section = createElement("div", "solution-steps");
+   
+    const section = createElement("div", "solution-steps", solutionElement);
     createMarkUp(section, markUp.step1);
 
     const inputs = section.querySelectorAll("input");
@@ -200,37 +227,60 @@ function step1() {
 
 // ----- Step2 -----
 function step2() {
-    const section = createElement("div", "solution-steps");
+    const section = createElement("div", "solution-steps", solutionElement);
     createMarkUp(section, markUp.step2);
 
     const inputs = section.querySelectorAll("input");
     [...inputs].forEach(n => n.addEventListener("blur", blur2))
-
 }
 
 // ----- Step3 -----
 function step3() {
-    const section = createElement("div", "solution-steps");
+    const section = createElement("div", "solution-steps", solutionElement);
     const markupKey = d < 0 ? "step3_1" : d === 0 ? "step3_2" : "step3_3";
     createMarkUp(section, markUp[markupKey]);
     if (d < 0) step4();
 
     const inputs = section.querySelectorAll("input");
     [...inputs].forEach(n => n.addEventListener("blur", blur32))
-
 };
 
 function step4() {
-    const section = createElement("div", "solution-steps");
+    const section = createElement("div", "solution-steps", solutionElement);
     createMarkUp(section, markUp.step4);
 };
 
-// Реалізували створення умови завдання
-createMarkUp(conditionElement, markUp.condition);
-const element = conditionElement.querySelector(".formula");
-const condition = getCondition(0);
-createMarkUp(element, condition);
 
 
-// Запускаємо перший крок розв'язку
-step1()
+// Реалізація заголовка
+titleitleElement.innerHTML = `Прості квадратні рівняння <span class="formula">ax<span class="sup">2</span> + bx + c = 0</span>`
+
+// Реалізація ромітки номерів задач
+let taskNumbersButtons = "";
+for (let i = 0; i < data.length; i++){
+    taskNumbersButtons =  taskNumbersButtons + `<li class="tascs-item"><button class="button tascs-button">${i+1}</button></li>`
+};
+createMarkUp(tactsElement, `<ul class="tascs-list">${taskNumbersButtons}</ul>`);
+
+// Знаходимо потрібні елементи 
+const taskButtons = tactsElement.querySelectorAll("button");
+
+//Навішуємо слухачів на кнопки
+taskButtons.forEach(button => button.addEventListener("click", start));
+
+function start(e) {
+    const button = e.target;
+    n = +button.textContent;
+    // console.log(n);
+    number = data[n-1]
+    taskButtons.forEach((button, i)=> {
+        button.setAttribute("disabled", "true");
+        button.className = i === n-1 ? "button tascs-button": "button tascs-button";
+    })
+    // Реалізували створення умови завдання
+    createMarkUp(conditionElement, markUp.condition);
+    const element = conditionElement.querySelector(".formula");
+    const condition = getCondition(0);
+    createMarkUp(element, condition);
+    step1()
+}
